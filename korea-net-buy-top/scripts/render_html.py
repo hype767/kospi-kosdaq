@@ -80,6 +80,9 @@ h2 small{font-size:13px;font-weight:400;color:var(--muted);margin-left:6px}
 .itabs button[data-c=f][aria-selected=true]{border-bottom-color:var(--f)}
 .itabs button[data-c=o][aria-selected=true]{border-bottom-color:var(--o)}
 .itabs button[data-c=i][aria-selected=true]{border-bottom-color:var(--i)}
+.itabs button[data-c=fo][aria-selected=true],.itabs button[data-c=foi][aria-selected=true]{border-bottom-color:var(--fg)}
+.b.fo,.b.foi{background:var(--fg)}
+.itabs{overflow-x:auto;white-space:nowrap}
 .panel{background:var(--card);border:1px solid var(--line);border-top:0;border-radius:0 0 12px 12px;padding:6px 0 10px}
 .meta{font-size:13px;color:var(--muted);padding:6px 16px 4px}
 .tw{overflow-x:auto}
@@ -115,18 +118,68 @@ tr.more{display:none}
 .kpi .d b{font-weight:600}
 .note{font-size:13px;color:var(--muted);margin-top:8px}
 details.detail{margin-top:32px}
+.in{color:var(--up)}.out{color:var(--down)}.muted{color:var(--muted)}
+.ctx h3 small{font-weight:400;color:var(--muted);font-size:12px}
+.cxrow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) minmax(0,2fr);gap:10px}
+.cx{display:flex;flex-direction:column;gap:1px;font-variant-numeric:tabular-nums}
+.cx .k{font-size:12.5px;color:var(--muted)}.cx b{font-size:17px}.cx small{font-size:12px;color:var(--muted)}
+.cx small.inst{font-size:13px;color:var(--fg);line-height:1.6}
+.cxline{font-size:13.5px;margin-top:10px;font-variant-numeric:tabular-nums}
+.warn{margin-top:10px;font-size:13px;background:color-mix(in srgb,var(--star) 14%,transparent);border-radius:8px;padding:7px 10px}
+.sgrid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.cards{margin-top:16px}
+@media (max-width:820px){.sgrid2{grid-template-columns:1fr}}
+.box.sig h3{margin-bottom:2px}.sd{font-size:12.5px;color:var(--muted);margin-bottom:6px}
+.srow2,.wrow{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(8em,auto);align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid var(--line)}
+.srow2:last-child,.wrow:last-child{border-bottom:0}
+.sn{min-width:0}.sn b{display:block;font-size:14.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sn small{display:block;font-size:12px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sv,.wv{text-align:right;font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;white-space:nowrap}
+.sv small,.wv small{display:block;font-weight:400;font-size:12px;color:var(--muted)}
+.wv b{font-size:15px}
+.wrow .badge{display:inline-block;margin-top:3px}
+.mspark .axis{stroke:var(--muted);stroke-width:1;opacity:.4}.mspark .sin{fill:var(--up)}.mspark .sout{fill:var(--down)}.mspark .recent{fill:var(--soft)}
+.empty{font-size:13px;color:var(--muted);padding:10px 0}
+.btsum{font-size:14.5px;line-height:1.6}
+.btchart{display:flex;align-items:stretch;gap:3px;height:90px;margin:12px 0 24px;border-bottom:0}
+.btb{flex:1;position:relative;background:linear-gradient(var(--line),var(--line)) center/100% 1px no-repeat}
+.btb span{position:absolute;left:15%;width:70%;border-radius:2px;max-height:50%}
+.btb span.in{background:var(--up)}.btb span.out{background:var(--down)}
+.btb i{position:absolute;bottom:-16px;left:50%;transform:translateX(-50%);font-size:9.5px;font-style:normal;color:var(--muted);white-space:nowrap}
+.fxline{font-size:13px;color:var(--muted);margin-top:2px}
+.frow .lead{grid-column:1/-1;font-size:12.5px;color:var(--muted);background:var(--soft);border-radius:6px;padding:3px 8px;margin-top:-2px}
+.frow .lead b{color:var(--fg);font-weight:600}
+.frow .lead .heavy{color:var(--star);font-weight:700;margin-right:6px}
 .vtabs{display:inline-flex;background:var(--soft);border-radius:999px;padding:3px;margin:2px 0 6px;flex-wrap:wrap}
 .vtabs button{font:inherit;font-size:14px;cursor:pointer;border:0;background:none;color:var(--muted);padding:6px 14px;border-radius:999px}
 .vtabs button[aria-selected=true]{background:var(--card);color:var(--fg);font-weight:700;box-shadow:0 1px 2px rgba(0,0,0,.12)}
 h3.sh{font-size:14px;color:var(--muted);margin:14px 0 8px;font-weight:600}
 .fgrid.one{grid-template-columns:1fr}
-.spark .axis{stroke:var(--line);stroke-width:1}.spark .sin{fill:var(--up)}.spark .sout{fill:var(--down)}
+.tcard{padding:12px 0;border-bottom:1px solid var(--line)}
+.tcard:last-child{border-bottom:0}
+.th{display:flex;align-items:baseline;gap:8px;margin-bottom:6px}
+.tn{font-weight:700;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tv{margin-left:auto;font-weight:800;font-size:16px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tv.in{color:var(--up)}.tv.out{color:var(--down)}
+.badge{font-size:11.5px;font-weight:600;border-radius:999px;padding:1px 8px;white-space:nowrap}
+.badge.in{color:var(--up);background:color-mix(in srgb,var(--up) 12%,transparent)}
+.badge.out{color:var(--down);background:color-mix(in srgb,var(--down) 12%,transparent)}
+.spark{display:block;width:100%;height:52px}
+.spark .axis{stroke:var(--muted);stroke-width:1;opacity:.5;vector-effect:non-scaling-stroke}
+.spark .sin{fill:var(--up)}.spark .sout{fill:var(--down)}
+.spark .recent{fill:var(--soft)}
+.sx{display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted);margin-top:2px;font-variant-numeric:tabular-nums}
+.tf{font-size:13px;color:var(--muted);margin-top:6px}
+.tf b{font-weight:700;font-variant-numeric:tabular-nums}
+.tlegend{font-size:12.5px;color:var(--muted);margin:2px 0 10px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.tlegend .sw{display:inline-block;width:10px;height:10px;border-radius:2px}
+.tlegend .sw.sin{background:var(--up)}.tlegend .sw.sout{background:var(--down)}.tlegend .sw.recent{background:var(--soft);border:1px solid var(--line)}
 table.trend td{padding:7px 10px}table.trend td.st{font-size:13px;min-width:7em}
 .dot.i{background:var(--i)}
 details.detail>summary{cursor:pointer;font-size:17px;font-weight:700;list-style:none;padding:12px 16px;background:var(--card);border:1px solid var(--line);border-radius:12px}
 details.detail>summary::after{content:" ▾";color:var(--muted)}
 details.detail[open]>summary::after{content:" ▴"}
-@media (max-width:600px){td.sc,th.sc{display:none}.srow{grid-template-columns:6.5em 1fr auto}.frow{grid-template-columns:1fr auto;grid-template-areas:"nm val" "tr tr";row-gap:6px}.frow .nm{grid-area:nm}.frow .val{grid-area:val}.frow .track{grid-area:tr}}
+@media (max-width:600px){.cxrow{grid-template-columns:repeat(3,1fr)}.cx.wide{grid-column:1/-1}.srow2{grid-template-columns:minmax(0,1fr) auto}.wrow{grid-template-columns:1fr;gap:4px}.wv{text-align:left}.wrow .badge{display:inline-block;margin-top:3px}.srow2 .mspark,.wrow .mspark{display:none}.btb i{display:none}td.sc,th.sc{display:none}.srow{grid-template-columns:6.5em 1fr auto}.frow{grid-template-columns:1fr auto;grid-template-areas:"nm val" "tr tr" "ld ld";row-gap:6px}.frow .lead{grid-area:ld}.frow .nm{grid-area:nm}.frow .val{grid-area:val}.frow .track{grid-area:tr}}
 """
 
 JS = """
@@ -258,20 +311,39 @@ def flow_rows(items, keys, peak, sub) -> str:
         out.append(
             f'<div class="frow"><span class="nm" title="{esc(r["name"])}">{esc(r["name"])}<small>{sub(r)}</small></span>'
             f'<span class="track"><span class="fill {cls}" style="width:{w:.0f}%"></span></span>'
-            f'<span class="val"><span class="{cls}">{signed(tot)}억</span><small>{split_line(r)}</small></span></div>')
+            f'<span class="val"><span class="{cls}">{signed(tot)}억</span><small>{split_line(r)}</small></span>'
+            + (f'<span class="lead">{lead_line(r, keys)}</span>' if r.get("members") and lead_line(r, keys) else "")
+            + '</div>')
     return "".join(out)
 
 
 def sector_agg(fl):
     agg = {}
     for r in fl:
-        if r["sector"] == "ETF":
+        if r["sector"] == "ETF" or "ETN" in r["name"]:
             continue
-        a = agg.setdefault(r["sector"], {"name": r["sector"], "f": 0.0, "o": 0.0, "i": 0.0, "n": 0})
+        a = agg.setdefault(r["sector"], {"name": r["sector"], "f": 0.0, "o": 0.0, "i": 0.0, "n": 0, "members": []})
         for k in ("f", "o", "i"):
             a[k] += r.get(k, 0.0)
         a["n"] += 1
+        a["members"].append(r)
     return list(agg.values())
+
+
+def lead_line(sec, keys) -> str:
+    """섹터의 주도 종목: 섹터 합계와 같은 방향으로 가장 크게 움직인 종목과 그 비중."""
+    tot = amt(sec, keys)
+    members = sec.get("members") or []
+    if not members or not tot:
+        return ""
+    lead = max(members, key=lambda r: amt(r, keys)) if tot > 0 else min(members, key=lambda r: amt(r, keys))
+    la = amt(lead, keys)
+    if la * tot <= 0:
+        return ""
+    share = la / tot * 100
+    share_txt = "섹터 합계 이상" if share >= 100 else f"섹터의 {share:.0f}%"
+    tag = '<b class="heavy">한 종목 쏠림</b>' if share >= 70 else ""
+    return f'{tag}주도 종목 <b>{esc(lead["name"])}</b> {signed(la)}억 · {share_txt}'
 
 
 def view_panel(fl, keys) -> str:
@@ -303,19 +375,26 @@ def vtabs(group: str, panels: dict, default_note: str = "") -> str:
     return f'<div class="vtabs">{btns}</div>{body}'
 
 
-def spark(vals) -> str:
+def spark(vals, dates) -> str:
+    """일별 순매수 막대 차트 (폭은 카드에 맞춰 늘어남). 최근 5일은 배경 음영, 막대마다 날짜·금액 툴팁."""
     if not vals:
         return ""
+    n = len(vals)
     peak = max(abs(v) for v in vals) or 1
-    w, h, bw = 120, 28, 120 / len(vals)
-    bars = []
+    W, H, mid = 400, 52, 26
+    bw = W / n
+    parts = [f'<rect x="{(n - 5) * bw:.1f}" y="0" width="{5 * bw:.1f}" height="{H}" class="recent"/>' if n >= 5 else "",
+             f'<line x1="0" x2="{W}" y1="{mid}" y2="{mid}" class="axis"/>']
     for i, v in enumerate(vals):
-        bh = max(1, abs(v) / peak * (h / 2 - 1))
-        y = h / 2 - bh if v >= 0 else h / 2
-        bars.append(f'<rect x="{i * bw + 0.5:.1f}" y="{y:.1f}" width="{max(1, bw - 1.5):.1f}" height="{bh:.1f}" '
-                    f'class="{"sin" if v >= 0 else "sout"}"/>')
-    return (f'<svg class="spark" viewBox="0 0 {w} {h}" width="{w}" height="{h}" aria-hidden="true">'
-            f'<line x1="0" x2="{w}" y1="{h/2}" y2="{h/2}" class="axis"/>{"".join(bars)}</svg>')
+        bh = max(1.5, abs(v) / peak * (mid - 3))
+        y = mid - bh if v >= 0 else mid
+        parts.append(f'<rect x="{i * bw + bw * 0.25:.1f}" y="{y:.1f}" width="{bw * 0.5:.1f}" height="{bh:.1f}" rx="1.5" '
+                     f'class="{"sin" if v >= 0 else "sout"}"><title>{esc(dates[i])}  {signed(v)}억</title></rect>')
+    mid_i = n // 2
+    labels = (f'<div class="sx"><span>{esc(dates[0])}</span><span>{esc(dates[mid_i])}</span>'
+              f'<span class="r">최근 5일 ▸ {esc(dates[-1])}</span></div>')
+    return (f'<svg class="spark" viewBox="0 0 {W} {H}" preserveAspectRatio="none" role="img" '
+            f'aria-label="일별 순매수 흐름">{"".join(parts)}</svg>{labels}')
 
 
 def streak(vals) -> int:
@@ -337,28 +416,298 @@ def trend_panel(hist, keys) -> str:
     for name, d in hist["sectors"].items():
         daily = [sum(d[k][i] for k in keys) for i in range(len(dates))]
         rows.append((name, daily, sum(daily[-5:]), sum(daily)))
-    def table(items, title):
-        trs = []
-        for name, daily, s5, s20 in items:
-            st = streak(daily)
-            st_txt = ('<span class="up">오늘 유입</span>' if st == 1 else
-                      '<span class="down">오늘 유출</span>' if st == -1 else
-                      f'<span class="up">{st}일 연속 유입</span>' if st > 1 else
-                      f'<span class="down">{-st}일 연속 유출</span>' if st < -1 else "")
-            c5, c20 = ("up" if s5 >= 0 else "down"), ("up" if s20 >= 0 else "down")
-            trs.append(f'<tr><td class="l nm">{esc(name)}</td><td class="l">{spark(daily)}</td>'
-                       f'<td class="{c5}">{signed(s5)}</td><td class="{c20}"><b>{signed(s20)}</b></td>'
-                       f'<td class="st">{st_txt}</td></tr>')
-        return (f'<div class="box"><h3>{title}</h3><div class="tw"><table class="trend"><thead><tr>'
-                f'<th class="l">업종</th><th class="l">일별 흐름 ({esc(dates[0])}~{esc(dates[-1])})</th>'
-                f'<th>5일</th><th>{len(dates)}일 누적</th><th>연속</th></tr></thead><tbody>{"".join(trs)}</tbody></table></div></div>')
+
+    def card(name, daily, s5, s20):
+        st = streak(daily)
+        badge = ('<span class="badge in">오늘 유입</span>' if st == 1 else
+                 '<span class="badge out">오늘 유출</span>' if st == -1 else
+                 f'<span class="badge in">{st}일 연속 유입</span>' if st > 1 else
+                 f'<span class="badge out">{-st}일 연속 유출</span>' if st < -1 else "")
+        c20 = "in" if s20 >= 0 else "out"
+        c5 = "up" if s5 >= 0 else "down"
+        c1 = "up" if daily[-1] >= 0 else "down"
+        return (f'<div class="tcard"><div class="th"><span class="tn">{esc(name)}</span>{badge}'
+                f'<span class="tv {c20}">{signed(s20)}억</span></div>'
+                f'{spark(daily, dates)}'
+                f'<div class="tf">최근 5일 <b class="{c5}">{signed(s5)}억</b> · 오늘 <b class="{c1}">{signed(daily[-1])}억</b></div></div>')
+
     tin = sorted([r for r in rows if r[3] > 0], key=lambda r: -r[3])[:8]
     tout = sorted([r for r in rows if r[3] < 0], key=lambda r: r[3])[:8]
-    return (f'<div class="fgrid one">{table(tin, f"{len(dates)}거래일 누적 돈이 들어온 섹터")}'
-            f'{table(tout, f"{len(dates)}거래일 누적 돈이 빠진 섹터")}</div>')
+    n = len(dates)
+    legend = ('<div class="tlegend"><span class="sw sin"></span>유입한 날 <span class="sw sout"></span>유출한 날 '
+              '<span class="sw recent"></span>최근 5일 · 막대 높이는 업종마다 따로 맞춤 · PC에서 막대에 마우스를 올리면 날짜·금액</div>')
+    return (legend + '<div class="fgrid">'
+            f'<div class="box"><h3>{n}거래일 누적 돈이 들어온 섹터</h3>{"".join(card(*r) for r in tin)}</div>'
+            f'<div class="box"><h3>{n}거래일 누적 돈이 빠진 섹터</h3>{"".join(card(*r) for r in tout)}</div></div>')
 
 
-def market_section(m: str, anchor: str, ts: list, fl, hist) -> str:
+# ───────────────────────── 신호 (외국인+기관 기준) ─────────────────────────
+MIN_MCAP = 500      # 억원: 이보다 작은 종목은 신호에서 뺀다 (작은 금액으로 강도가 튀는 것 방지)
+MIN_AMT = 3         # 억원: 이보다 작은 순매수는 신호로 보지 않는다
+MIN_VALUE = 10      # 억원: 그날 거래대금이 이보다 작으면 신호에서 뺀다 (거래가 거의 없는 종목의 '연속' 착시 방지)
+
+
+def fo_series(r):
+    h = r.get("h")
+    return [a + b for a, b in zip(h["f"], h["o"])] if h else []
+
+
+def ret_pct(h, a, b):
+    try:
+        return (h["c"][b] / h["c"][a] - 1) * 100
+    except (TypeError, ZeroDivisionError, IndexError):
+        return 0.0
+
+
+def bp(x, mcap):
+    """시가총액 대비 비율(%)."""
+    return x / mcap * 100 if mcap else 0.0
+
+
+def signal_universe(fl):
+    return [r for r in fl if r.get("h") and r["sector"] != "ETF" and "ETN" not in r["name"]
+            and "스팩" not in r["name"] and r.get("mcap", 0) >= MIN_MCAP and r.get("value", 0) >= MIN_VALUE]
+
+
+def compute_signals(fl):
+    U = signal_universe(fl)
+    sig = {}
+    # 1) 수급 강도: 오늘 외+기 순매수 / 시가총액
+    st = [r for r in U if r["f"] + r["o"] >= MIN_AMT]
+    sig["strength"] = sorted(st, key=lambda r: -bp(r["f"] + r["o"], r["mcap"]))[:12]
+    # 2) 수급 전환: 앞 15일 누적 유출 → 최근 5일 누적 유입, 오늘도 유입
+    tr = []
+    for r in U:
+        s_ = fo_series(r)
+        if len(s_) < 10:
+            continue
+        prior, last5 = sum(s_[:-5]), sum(s_[-5:])
+        if prior < 0 and last5 >= MIN_AMT and s_[-1] > 0:
+            tr.append((r, prior, last5))
+    sig["turn"] = [x for x in sorted(tr, key=lambda x: -bp(x[2], x[0]["mcap"]))[:10]]
+    # 3) 연속 순매수: 오늘까지 며칠째 외+기 순매수
+    sk = []
+    for r in U:
+        s_ = fo_series(r)
+        k = 0
+        for v in reversed(s_):
+            if v > 0:
+                k += 1
+            else:
+                break
+        if k >= 5 and sum(s_[-k:]) >= MIN_AMT:
+            sk.append((r, k, sum(s_[-k:])))
+    sig["streak"] = sorted(sk, key=lambda x: (-x[1], -bp(x[2], x[0]["mcap"])))[:10]
+    # 4) 신규 쌍끌이: 오늘 외국인·기관 동반 순매수, 어제는 아님
+    nb = []
+    for r in U:
+        h = r["h"]
+        if len(h["f"]) < 2:
+            continue
+        today = r["f"] > 0 and r["o"] > 0
+        yday = h["f"][-2] > 0 and h["o"][-2] > 0
+        if today and not yday and r["f"] + r["o"] >= MIN_AMT:
+            nb.append(r)
+    sig["newboth"] = sorted(nb, key=lambda r: -bp(r["f"] + r["o"], r["mcap"]))[:10]
+    # 5) 주가-수급 괴리 (20일)
+    acc, dis = [], []
+    for r in U:
+        s_ = fo_series(r)
+        if len(s_) < 10:
+            continue
+        cum, ret = sum(s_), ret_pct(r["h"], 0, -1)
+        if cum >= MIN_AMT * 3 and ret <= -3:
+            acc.append((r, cum, ret))
+        if cum <= -MIN_AMT * 3 and ret >= 5:
+            dis.append((r, cum, ret))
+    sig["acc"] = sorted(acc, key=lambda x: -bp(x[1], x[0]["mcap"]))[:8]
+    sig["dis"] = sorted(dis, key=lambda x: bp(x[1], x[0]["mcap"]))[:8]
+    return sig
+
+
+def backtest(fl, days, top=20, fwd=5):
+    """지난 20일 동안 매일 '수급 강도 상위 20종목'을 골랐다면 fwd일 뒤 시장(신호 대상 전체) 평균보다 나았나."""
+    U = signal_universe(fl)
+    n = len(days)
+    rows = []
+    for d in range(0, n - fwd):
+        cand, allret = [], []
+        for r in U:
+            c = r["h"]["c"]
+            if not c[d] or not c[d + fwd]:
+                continue
+            fr = (c[d + fwd] / c[d] - 1) * 100
+            allret.append(fr)
+            fo = r["h"]["f"][d] + r["h"]["o"][d]
+            if fo >= MIN_AMT:
+                mc = r["mcap"] * c[d] / c[-1] if c[-1] else r["mcap"]
+                cand.append((fo / mc if mc else 0, fr))
+        if len(cand) < top or not allret:
+            continue
+        pick = sorted(cand, key=lambda x: -x[0])[:top]
+        avg = sum(x[1] for x in pick) / top
+        mkt = sum(allret) / len(allret)
+        rows.append({"day": days[d], "pick": avg, "mkt": mkt, "ex": avg - mkt})
+    if not rows:
+        return None
+    return {"rows": rows, "avg_ex": sum(r["ex"] for r in rows) / len(rows),
+            "wins": sum(1 for r in rows if r["ex"] > 0), "n": len(rows), "top": top, "fwd": fwd}
+
+
+def mini_spark(vals, w=84, h=22) -> str:
+    if not vals:
+        return ""
+    peak = max(abs(v) for v in vals) or 1
+    n, mid = len(vals), h / 2
+    bw = w / n
+    bars = []
+    for i, v in enumerate(vals):
+        bh = max(1, abs(v) / peak * (mid - 1))
+        y = mid - bh if v >= 0 else mid
+        bars.append(f'<rect x="{i * bw + bw * .2:.1f}" y="{y:.1f}" width="{bw * .6:.1f}" height="{bh:.1f}" '
+                    f'class="{"sin" if v >= 0 else "sout"}"/>')
+    return (f'<svg class="mspark" viewBox="0 0 {w} {h}" width="{w}" height="{h}" aria-hidden="true">'
+            f'<rect x="{(n - 5) * bw:.1f}" y="0" width="{5 * bw:.1f}" height="{h}" class="recent"/>'
+            f'<line x1="0" x2="{w}" y1="{mid}" y2="{mid}" class="axis"/>{"".join(bars)}</svg>')
+
+
+def sig_row(r, main, sub) -> str:
+    rate_cls = "up" if r["rate"] >= 0 else "down"
+    return (f'<div class="srow2"><div class="sn"><b>{esc(r["name"])}</b>'
+            f'<small>{esc(r["sector"])} · <span class="{rate_cls}">{r["rate"]:+.2f}%</span></small></div>'
+            f'{mini_spark(fo_series(r))}<div class="sv">{main}<small>{sub}</small></div></div>')
+
+
+def sig_box(title, desc, rows_html) -> str:
+    body = rows_html or '<div class="empty">오늘은 해당 종목이 없어요</div>'
+    return f'<div class="box sig"><h3>{title}</h3><div class="sd">{desc}</div>{body}</div>'
+
+
+def signals_html(fl) -> str:
+    sig = compute_signals(fl)
+    pct = lambda x: f"{x:.2f}%"
+    strength = "".join(sig_row(r, f'<span class="in">{signed(r["f"] + r["o"])}억</span>',
+                               f'시총의 {pct(bp(r["f"] + r["o"], r["mcap"]))} · 거래대금의 '
+                               f'{(r["f"] + r["o"]) / r["value"] * 100 if r.get("value") else 0:.0f}%')
+                       for r in sig["strength"])
+    turn = "".join(sig_row(r, f'<span class="in">5일 {signed(l5)}억</span>', f'앞 15일 {signed(pr)}억')
+                   for r, pr, l5 in sig["turn"])
+    streak_ = "".join(sig_row(r, f'<span class="in">{k}일 연속</span>', f'누적 {signed(c)}억 · 시총의 {pct(bp(c, r["mcap"]))}')
+                      for r, k, c in sig["streak"])
+    newb = "".join(sig_row(r, f'<span class="in">{signed(r["f"] + r["o"])}억</span>',
+                           f'외 {signed(r["f"])} · 기 {signed(r["o"])}') for r in sig["newboth"])
+    acc = "".join(sig_row(r, f'<span class="in">20일 {signed(c)}억</span>', f'20일 주가 <span class="down">{ret:+.1f}%</span>')
+                  for r, c, ret in sig["acc"])
+    dis = "".join(sig_row(r, f'<span class="out">20일 {signed(c)}억</span>', f'20일 주가 <span class="up">{ret:+.1f}%</span>')
+                  for r, c, ret in sig["dis"])
+    return (
+        '<h2>오늘 눈여겨볼 변화<small>외국인+기관 기준 · 시총 500억·거래대금 10억 이상 · ETF·ETN 제외 · 미니차트 = 20일 외+기 순매수</small></h2>'
+        '<div class="sgrid2">'
+        + sig_box("수급 전환", "앞 15일은 빠지다가 최근 5일 들어오기 시작한 종목", turn)
+        + sig_box("연속 순매수", "외+기가 오늘까지 5일 이상 연속으로 산 종목", streak_)
+        + sig_box("신규 쌍끌이", "오늘 외국인·기관이 같이 샀고, 어제는 아니었던 종목", newb)
+        + sig_box("수급 강도 TOP", "덩치 대비 많이 산 종목 (순매수 ÷ 시가총액)", strength)
+        + '</div><h2>주가와 수급이 엇갈린 종목<small>20일 기준 · 같은 방향이 아니라 눈여겨볼 만한 곳</small></h2><div class="sgrid2">'
+        + sig_box("주가는 빠졌는데 외+기는 산 종목", "20일 주가 −3% 이하 · 외+기 누적 순매수", acc)
+        + sig_box("주가는 올랐는데 외+기는 판 종목", "20일 주가 +5% 이상 · 외+기 누적 순매도", dis)
+        + '</div>')
+
+
+def backtest_html(fl, hist) -> str:
+    if not hist or not hist.get("dates"):
+        return ""
+    bt = backtest(fl, hist["dates"])
+    if not bt:
+        return ""
+    peak = max(abs(r["ex"]) for r in bt["rows"]) or 1
+    bars = "".join(
+        f'<div class="btb" title="{esc(r["day"])}: 상위 {r["pick"]:+.2f}% / 시장 {r["mkt"]:+.2f}%">'
+        f'<span class="{"in" if r["ex"] >= 0 else "out"}" style="height:{max(2, abs(r["ex"]) / peak * 100):.0f}%;'
+        f'{"bottom:50%" if r["ex"] >= 0 else "top:50%"}"></span><i>{esc(r["day"])}</i></div>'
+        for r in bt["rows"])
+    cls = "in" if bt["avg_ex"] >= 0 else "out"
+    return (f'<h2>신호 점검<small>이 페이지의 신호가 최근에 맞았는지 · 참고용</small></h2><div class="box bt">'
+            f'<div class="btsum">지난 {bt["n"]}거래일 동안 매일 <b>수급 강도 상위 {bt["top"]}종목</b>을 골랐다면, '
+            f'{bt["fwd"]}거래일 뒤 수익률이 시장 평균보다 평균 <b class="{cls}">{bt["avg_ex"]:+.2f}%p</b> '
+            f'({bt["n"]}일 중 {bt["wins"]}일 앞섬)</div>'
+            f'<div class="btchart">{bars}</div>'
+            '<div class="note">막대 = 그날 고른 종목의 5일 뒤 수익률 − 시장 평균 (빨강 앞섬 / 파랑 뒤짐). '
+            '표본이 작고(20일) 거래비용을 빼지 않았으며, 과거 결과가 앞으로를 보장하지 않아요. '
+            '기록이 쌓이면 더 긴 기간으로 점검할 수 있어요.</div></div>')
+
+
+def watch_html(fl, watch) -> str:
+    if not watch:
+        return ""
+    by = {r["code"]: r for r in fl}
+    by_name = {r["name"]: r for r in fl}
+    rows = []
+    for w in watch:
+        r = by.get(w) or by_name.get(w)
+        if not r:
+            continue
+        s_ = fo_series(r)
+        k = 0
+        for v in reversed(s_):
+            if (v > 0) == (s_[-1] > 0) and v != 0:
+                k += 1
+            else:
+                break
+        streak_txt = (f'<span class="badge in">{k}일 연속 유입</span>' if s_ and s_[-1] > 0 and k > 1 else
+                      f'<span class="badge out">{k}일 연속 유출</span>' if s_ and s_[-1] < 0 and k > 1 else "")
+        r20 = ret_pct(r["h"], 0, -1) if r.get("h") else 0
+        rows.append(
+            f'<div class="wrow"><div class="sn"><b>{esc(r["name"])}</b><small>{esc(r["sector"])} · 종가 {r["price"]:,} '
+            f'<span class="{"up" if r["rate"] >= 0 else "down"}">{r["rate"]:+.2f}%</span></small>{streak_txt}</div>'
+            f'{mini_spark(s_, 120, 26)}'
+            f'<div class="wv"><b class="{"in" if r["f"] + r["o"] >= 0 else "out"}">외+기 {signed(r["f"] + r["o"])}억</b>'
+            f'<small>{split_line(r)}</small>'
+            f'<small>5일 {signed(sum(s_[-5:]))}억 · 20일 {signed(sum(s_))}억 · 20일 주가 {r20:+.1f}%</small></div></div>')
+    if not rows:
+        return ""
+    return f'<h2>내 관심 종목</h2><div class="box">{"".join(rows)}</div>'
+
+
+def context_html(m, ctx, hist) -> str:
+    """시장 맥락: 투자자별 시장 전체 순매수(정확), 기관 세부, 외국인 선물, 이벤트일."""
+    days = (ctx or {}).get("markets", {}).get(m) or []
+    parts = []
+    if days:
+        t = days[-1]
+        last5 = days[-5:]
+        def cell(lab, k, c):
+            v, v5 = t[k], sum(d[k] for d in last5)
+            return (f'<div class="cx"><span class="k"><span class="dot {c}"></span>{lab}</span>'
+                    f'<b class="{"in" if v >= 0 else "out"}">{signed(v)}억</b><small>5일 {signed(v5)}억</small></div>')
+        inst = t.get("inst", {})
+        o_pos = t["o"]
+        fin = inst.get("금융투자", 0)
+        warn = ""
+        if o_pos > 0 and fin > 0 and fin / o_pos >= .5:
+            warn = (f'<div class="warn">기관 순매수의 {fin / o_pos * 100:.0f}%가 금융투자예요. '
+                    'ETF 설정·차익거래 같은 기계적 매매일 수 있어 기관 수급을 조금 할인해서 보세요.</div>')
+        inst_txt = " · ".join(f'{k} {signed(v)}' for k, v in sorted(inst.items(), key=lambda kv: -abs(kv[1]))[:4])
+        parts.append(f'<div class="cxrow">{cell("외국인", "f", "f")}{cell("기관", "o", "o")}{cell("개인", "i", "i")}'
+                     f'<div class="cx wide"><span class="k">기관 세부 (억원)</span><small class="inst">{inst_txt}</small></div></div>{warn}')
+    fut = (ctx or {}).get("futures") or []
+    if m == "코스피" and fut:
+        t, f5 = fut[-1]["f"], sum(d["f"] for d in fut[-5:])
+        parts.append(f'<div class="cxline">외국인 <b>코스피200 선물</b> 오늘 <b class="{"in" if t >= 0 else "out"}">{t:+,}계약</b>'
+                     f' · 5일 {f5:+,}계약 <span class="muted">(현물 방향을 미리 보여주는 경우가 많아요)</span></div>')
+    ev = (hist or {}).get("events") or {}
+    if ev:
+        dd = (hist or {}).get("days") or []
+        today = dd[-1] if dd else ""
+        recent = " · ".join(f'{d[4:6]}/{d[6:]} {nm}' for d, nm in sorted(ev.items()))
+        if today in ev:
+            parts.append(f'<div class="warn">오늘은 <b>{esc(ev[today])}</b>이에요. 이런 날은 수급이 기계적으로 크게 움직여 평소보다 해석에 주의가 필요해요.</div>')
+        parts.append(f'<div class="cxline muted">최근 20일 이벤트: {esc(recent)}</div>')
+    if not parts:
+        return ""
+    return f'<div class="box ctx"><h3>시장 전체 수급 <small>정확값</small></h3>{"".join(parts)}</div>'
+
+
+def market_section(m: str, anchor: str, ts: list, fl, hist, ctx=None, watch=None) -> str:
     by = {inv_key(t["investor"]): t for t in ts}
     names = lambda k: [str(r[0]) for r in (by.get(k, {}).get("rows") or [])]
     both = set(names("외국인")) & set(names("기관"))
@@ -382,20 +731,43 @@ def market_section(m: str, anchor: str, ts: list, fl, hist) -> str:
         flow_html = ('<h2>오늘 자금 흐름<small>누구 돈 기준으로 볼지 고르세요 · ETF 제외 · 단위 억원</small></h2>'
                      + vtabs(f"{anchor}-flow", {k: view_panel(fl, keys) for k, _, keys in views}))
         if hist and hist.get("sectors"):
-            trend_html = ('<h2>섹터 추세<small>최근 20거래일 업종별 순매수 · 미니차트 막대 하나가 하루 · 연속 = 최근 며칠째 같은 방향인지</small></h2>'
+            trend_html = ('<h2>섹터 추세<small>최근 20거래일 업종별 순매수 · 막대 하나가 하루</small></h2>'
                           + vtabs(f"{anchor}-trend", {k: trend_panel(hist, keys) for k, _, keys in views}))
 
+    # 상위 100 탭: 외국인 | 기관 | 외국인+기관 | 개인 | 외국인+기관+개인
+    def combo_table(keys, source):
+        if not fl:
+            return None
+        cols = (by.get("외국인") or by.get("기관") or {}).get("columns") or \
+            ["종목명", "업종", "순매수 금액(억원)", "종가(원)", "등락률", "거래대금(억원)"]
+        top = sorted((r for r in fl if amt(r, keys) > 0), key=lambda r: -amt(r, keys))[:100]
+        rows = [[r["name"], r["sector"], f"{amt(r, keys):,.0f}", f'{r["price"]:,}', f'{r["rate"]:+.2f}%',
+                 f'{r.get("value", 0):,.0f}'] for r in top]
+        return {"columns": cols, "rows": rows, "source": source}
+
+    tabs100 = [
+        ("외국인", "f", by.get("외국인")),
+        ("기관", "o", by.get("기관")),
+        ("외국인+기관", "fo", combo_table(("f", "o"), "외국인+기관 합산 (정확값 + 순위 밖 종목은 추정)")),
+        ("개인", "i", by.get("개인")),
+        ("외국인+기관+개인", "foi", combo_table(("f", "o", "i"),
+            "세 투자자 합산 (추정) · 세 투자자를 더하면 남는 건 기타법인 등의 반대편 매매라 금액이 작아요")),
+    ]
     itabs, panels = [], []
-    for lab, c in INVESTORS:
-        if lab not in by:
+    for lab, c, t in tabs100:
+        if not t or not t.get("rows"):
             continue
         pid = f"{anchor}-{c}"
         itabs.append(f'<button type="button" data-group="{anchor}" data-target="{pid}" data-c="{c}">{lab}</button>')
-        panels.append(f'<div class="panel" id="{pid}" hidden>{stock_table(by[lab], c, both)}</div>')
+        panels.append(f'<div class="panel" id="{pid}" hidden>{stock_table(t, c, both)}</div>')
 
     return (f'<section id="{anchor}" hidden>'
-            f'<div class="cards">{cards}</div>{flow_html}{trend_html}'
-            f'<details class="detail"><summary>투자자별 순매수 상위 100 전체 보기</summary>'
+            + context_html(m, ctx, hist) + watch_html(fl or [], watch)
+            + f'<div class="cards">{cards}</div>'
+            + (signals_html(fl) if fl else "")
+            + f'{flow_html}{trend_html}'
+            + backtest_html(fl or [], hist)
+            + f'<details class="detail"><summary>투자자별 순매수 상위 100 전체 보기</summary>'
             f'<div class="itabs">{"".join(itabs)}</div>{"".join(panels)}</details>'
             f'<div class="note">외국인·기관의 오늘 금액은 네이버 순위의 정확한 값(순위 밖 종목은 수량×종가 추정), '
             f'개인과 섹터 추세는 종목별 순매수 수량 × 종가로 계산한 추정치예요. '
@@ -413,7 +785,8 @@ def main(src: str, dst: str) -> None:
         ts = [t for t in tables if t.get("market") == m]
         if not ts:
             continue
-        sec = market_section(m, anchor, ts, data.get("flows", {}).get(m), data.get("history", {}).get(m))
+        sec = market_section(m, anchor, ts, data.get("flows", {}).get(m), data.get("history", {}).get(m),
+                             data.get("context"), data.get("watch"))
         ix = data.get("indices", {}).get(m)
         ix_html = ""
         if ix and ix.get("close"):
@@ -423,13 +796,20 @@ def main(src: str, dst: str) -> None:
         mtabs.append(f'<button type="button" data-group="market" data-target="{anchor}">{m}{ix_html}</button>')
         sections.append(sec)
 
+    fx = (data.get("context") or {}).get("fx")
+    fx_html = ""
+    if fx and fx.get("close"):
+        cls = "up" if fx["diff"] > 0 else "down" if fx["diff"] < 0 else ""
+        fx_html = (f'<div class="fxline">원·달러 환율 <b>{esc(fx["close"])}원</b> '
+                   f'<span class="{cls}">{fx["diff"]:+.2f} ({fx["rate"]:+.2f}%)</span> · {esc(fx.get("at", ""))} 고시 '
+                   '· 환율이 오르면(원화 약세) 외국인 매도 압력이 커지는 경향이 있어요</div>')
     footer = esc(data.get("footer", ""))
     page = f"""<!doctype html><html lang="ko"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>오늘 순매수 {date}</title><style>{CSS}</style></head><body><main>
 <h1>오늘 순매수</h1>
 <div class="sub">{date}{' · ' + note if note else ''} · 투자자별 자금 흐름 · 단위 억원 · <span class="up">빨강 유입</span> / <span class="down">파랑 유출</span></div>
-<div class="mtabs">{''.join(mtabs)}</div>
+{fx_html}<div class="mtabs">{''.join(mtabs)}</div>
 {''.join(sections)}
 {f'<div class="sub" style="margin-top:28px">{footer}</div>' if footer else ''}
 </main><script>{JS}</script></body></html>"""
